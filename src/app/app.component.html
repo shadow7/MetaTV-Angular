@@ -1,0 +1,76 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .app-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  }
+
+  .video-container {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 30vh;
+  }
+
+  .video-player {
+    min-height: 360px;
+    min-width: 640px;
+    width: 1080px;
+    height: 720px;
+  }
+
+  .video-controls {
+    width: 100vw;
+    position: fixed;
+    top: 70vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+</style>
+
+<div class="app-container" role="main">
+
+  <div class="video-container" role="row">
+    <!--Video Player-->
+    <iframe class="video-player" src="https://www.youtube.com/embed/vZDWNsWmHxU">
+    </iframe>
+  </div>
+  <!--Previous Now and Next Controls-->
+  <div class="video-controls" role="row">
+    <button>
+    </button>
+<!--    .....-->
+  </div>
+</div>
+
+
+<router-outlet>
+
+</router-outlet>
