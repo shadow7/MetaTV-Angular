@@ -25,11 +25,11 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    background: #333333;
   }
 
   .video-container {
     width: 100%;
-    margin: 0 auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -40,16 +40,19 @@
   .video-player {
     min-height: 360px;
     min-width: 640px;
-    width: 1080px;
-    height: 720px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
   }
 
-  .video-controls {
+  .video-controls-container {
     width: 100vw;
     position: fixed;
     top: 70vh;
     right: 0;
     left: 0;
+    background: white;
     bottom: 0;
   }
 
@@ -59,14 +62,14 @@
 
   <div class="video-container" role="row">
     <!--Video Player-->
-    <iframe class="video-player" src="https://www.youtube.com/embed/vZDWNsWmHxU">
+    <iframe id="meta-tv" class="video-player" [src]="currently_playing_video">
     </iframe>
   </div>
   <!--Previous Now and Next Controls-->
-  <div class="video-controls" role="row">
+  <div class="video-controls-container" role="row">
     <button>
     </button>
-<!--    .....-->
+    <!--    .....-->
   </div>
 </div>
 
